@@ -28,8 +28,6 @@ const usuariosGet = async(req = request, res = response)=> {
 
  const usuariosPost = async(req, res = response)=> {
 
-  
-
     const {nombre, correo, password, rol} = req.body;
     const usuario = new Usuario({nombre, correo, password, rol});
 
@@ -51,7 +49,7 @@ const usuariosGet = async(req = request, res = response)=> {
  const usuariosPut = async(req, res = response)=> {
 
     const {id} = req.params;
-    const {_id,password,ggogle,correo, ...resto} = req.body;
+    const {_id,password,google,correo, ...resto} = req.body;
 
     //validar contra base de datos
 
