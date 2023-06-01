@@ -26,7 +26,7 @@ const router = Router();
 
 router.get('/', usuariosGet);
 
-  router.post('/',[
+router.post('/',[
     check('nombre','El nombre es obligatorio').not().isEmpty(),
     check('password','El password es obligatorio, debe tener mas de 6 letras').isLength({min: 6}),
     check('correo','El correo no es valido').isEmail(),

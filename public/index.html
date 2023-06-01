@@ -47,7 +47,7 @@
             body:JSON.stringify(body)
          })
             .then( resp => resp.json())
-            .then(resp =>{
+            .then( resp => {
                console.log(resp)
                localStorage.setItem('email', resp.usuario.correo)
             })
@@ -59,7 +59,7 @@
    button.onclick = ()=>{
        console.log( google.accounts.id );
        google.accounts.id.disableAutoSelect();
-       google.accounts.id.revoke( localStorage.getItem( 'email'), done =>{
+       google.accounts.id.revoke( localStorage.getItem( 'email' ), done =>{
          localStorage.clear();
          location.reload();
        });
